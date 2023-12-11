@@ -6,23 +6,40 @@
     <title>Asigment 16</title>
     <style>
         body {
-        background: teal;
-      }
- 
-      h1 {
-        font-family: monospace;
-        font-size: 30px;
+        height: 100vh;
+        background: url(https://unsplash.com/photos/FYwRjPjNgcg/download?ixid=M3wxMjA3fDB8MXx0b3BpY3x8NnNNVmpUTFNrZVF8fHx8fDJ8fDE3MDIzMDEyNjV8&force=true&w=1920);
+        background-size: cover;
+        background-position: center;
         color: white;
+        display: flex;
+        flex-direction: column;
       }
-      table, td, th, tr {
-         border: 1px solid black;
+      button:hover{
+        background: rebeccapurple;
       }
+      h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+      }
+      button, input{
+        padding: 10px;
+        border-radius: 5px;
+        transition: 0.4s;
+      }
+      table{
+        margin: 10px;
+      }
+      table, td, th{
+         border: 2px solid black;
+         font-size: larger;
+      }
+
     </style>
 </head>
 <body>
     <h1>Assigment 16</h1>
     <form action="#">
-        <input id="text" type="text" placeholder="Enter your full name here">
+        <input id="text" type="text" placeholder="Enter your full name here...">
         <button id="add">Add name</button>
         <button id="deleteFirst">Delete First</button>
         <button id="deleteLast">Delete Last</button>

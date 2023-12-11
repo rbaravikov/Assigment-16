@@ -37,7 +37,7 @@ class FullName{
 let entry = new FullName(text)
 
 add.addEventListener('click', () => {
-    if(!text.value) return console.log("Enter full name")
+    if(!text.value) return alert("Enter full name")
     // sukuriam const fullName
     entry.separateName()
     localStorage.setItem("namesArray", JSON.stringify(namesArray))
@@ -64,10 +64,20 @@ if (localStorage.namesArray != null){
 
 delFirst.addEventListener('click', () => {
     namesArray.shift()
-    console.log(namesArray)
     table.innerHTML = `<tr>
     <th>Name</th>
     <th>Surname</th>
 </tr>`
     namesArray.forEach(appendTr)
+    localStorage.setItem("namesArray", JSON.stringify(namesArray))  
+})
+
+delLast.addEventListener('click', ()=>{
+    namesArray.pop()
+    table.innerHTML = `<tr>
+    <th>Name</th>
+    <th>Surname</th>
+</tr>`
+    namesArray.forEach(appendTr)
+    localStorage.setItem("namesArray", JSON.stringify(namesArray))
 })
